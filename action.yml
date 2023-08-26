@@ -1,12 +1,6 @@
 name: 'DeployVu frontend preview'
 description: 'Creates a link to a preview build of your frontend application'
 
-inputs:
-  # Define inputs if needed
-
-outputs:
-  # Define outputs if needed
-
 env:
   DEPLOYVU_API_KEY: VALID_API_KEY
 
