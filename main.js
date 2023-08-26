@@ -9,7 +9,7 @@ async function run() {
     // Execute commands
     await exec.exec('npm ci');
     await exec.exec('npm run build');
-    await exec.exec('ls -laS');
+    await exec.exec('ls -laSh');
     await exec.exec('npx deployvu-cli preview');
 
     // If you need to set outputs
