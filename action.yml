@@ -3,6 +3,7 @@ description: 'Creates a link to a preview build of your frontend application'
 
 env:
   DEPLOYVU_API_KEY: VALID_API_KEY
+  CI: true
 
 runs:
   using: 'node12'  # specify the use of Node.js
