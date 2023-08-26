@@ -1,0 +1,23 @@
+name: 'DeployVu frontend preview'
+description: 'Creates a link to a preview build of your frontend application'
+on:
+  pull_request:
+    types: [opened, reopened]
+  push:
+    branches:
+      - '**'
+
+env:
+  DEPLOYVU_API_KEY: VALID_API_KEY
+
+jobs:
+  deploy-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - run: npm ci
+      - run: npm run build
+      - run: npx deployvu-cli preview
